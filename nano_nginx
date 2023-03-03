@@ -1,0 +1,20 @@
+#
+echo "Criação do arquivo de configuração para vários servidores..."
+http {
+   
+    upstream all {
+        server 223.25.0.133:80;
+        server 223.25.0.172:80;
+        server 223.25.0.244:80;
+    }
+
+    server {
+         listen 4500;
+         location / {
+              proxy_pass http://all/;
+         }
+    }
+
+}
+
+events { }
