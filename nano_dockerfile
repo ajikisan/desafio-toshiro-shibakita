@@ -1,4 +1,4 @@
-# Indica a imagem e arquivo de configuração a ser copiados para o container
+# Indica a imagem e arquivo de configuração a serem copiados para o container
 
 FROM nginx
 COPY nginx.conf /etc/nginx/nginx.conf
